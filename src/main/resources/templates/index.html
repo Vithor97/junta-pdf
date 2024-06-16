@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Merge PDFs</title>
+    <title>Junta PDFs</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
         .centered {
@@ -41,14 +41,14 @@
 <body>
 <div class="container centered">
     <div>
-        <h1 class="mb-3 text-center">Merge PDFs</h1>
+        <h1 class="mb-3 text-center">Junta PDFs</h1>
         <form id="pdfForm" method="post" action="/merge" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="files">Select PDF files:</label>
                 <input type="file" id="files" name="files" class="form-control-file" multiple required accept="application/pdf">
             </div>
             <div id="previews" class="d-flex flex-wrap"></div>
-            <button type="submit" class="btn btn-primary btn-block">Merge</button>
+            <button type="submit" class="btn btn-primary btn-block">Juntar</button>
         </form>
         <div th:if="${message}" class="mt-3">
             <div class="alert alert-danger" th:text="${message}"></div>
