@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Merged PDF</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .centered {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+<div class="container centered">
+    <div>
+        <h1 class="mb-3 text-center">Merged PDF</h1>
+        <div class="alert alert-success text-center">
+            PDFs foram mesclados com sucesso!
+        </div>
+        <div class="text-center">
+            <a th:href="@{'/download?path=' + ${filePath}}" class="btn btn-primary mb-3">Download Merged PDF</a>
+            <a href="/" class="btn btn-secondary">Voltar para o início</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
